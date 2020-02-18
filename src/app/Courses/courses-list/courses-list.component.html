@@ -1,0 +1,11 @@
+<h2>My Courses</h2>
+<div class = " oneBox container-fluid mt-5">
+  <div class = "row">
+    <app-one-course-visible class = "col-lg-3 col-md-4 col-sm-6"
+        *ngFor="let course of courses"
+              [id]="course.id"
+              [image]="course.image"
+              [name]="course.courseName">
+    </app-one-course-visible>
+  </div>
+</div>

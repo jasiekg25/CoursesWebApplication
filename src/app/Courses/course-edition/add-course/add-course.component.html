@@ -1,0 +1,98 @@
+<div class="container mt-4 mb-3">
+  <form [formGroup]="newCourseForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="courseName">Course Name</label>
+      <input type="text" id="courseName" formControlName="courseName" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="numberOfECTS">ECTS points</label>
+      <input type="number" id="numberOfECTS" formControlName="courseName" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="numberOfSemester">Semester</label>
+      <input type="number" id="numberOfSemester" formControlName="numberOfSemester" class="form-control" min="1"
+             max="10">
+    </div>
+    <div class="form-group">
+      <label for="maxNumberOfStudents">Maximal number of students</label>
+      <input type="text" id="maxNumberOfStudents" formControlName="maxNumberOfStudents" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="formOfCourse">Forma kursu</label>
+      <select class="form-control" id="formOfCourse" formControlName="formOfCourse">
+        <option>Wykład</option>
+        <option>Laboratoria</option>
+        <option>Ćwiczenia</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="image">Ikona kursu</label>
+      <input type="text" id="image" formControlName="image" class="form-control">
+    </div>
+    <button class="btn btn-success" type="submit" [disabled]="!newCourseForm.valid">Dodaj kurs</button>
+  </form>
+</div>
+
+
+<!--  <div class="row">-->
+<!--    <div class="col-md-6">-->
+
+
+<!--      <div class="form-group">-->
+<!--        <input placeholder="Nazwa kursu" name="name" [(ngModel)]="course.name" type="text" class="validate"-->
+<!--               #name="ngModel" required>-->
+<!--        <div class="error" *ngIf="name.touched && name.errors?.required">-->
+<!--          Name is required.-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="form-group">-->
+<!--        <input type="range" name="ects" class="custom-range" [(ngModel)]="course.ects" min="0" max="15" step="1">-->
+<!--        ECTS: {{course.ects}}-->
+<!--      </div>-->
+<!--      <div class="form-group">-->
+<!--        <input type="range" name="semester" class="custom-range" [(ngModel)]="course.semester" min="1" max="10"-->
+<!--               step="1">-->
+<!--        Semester: {{course.semester}}-->
+<!--      </div>-->
+<!--      <div class="form-group">-->
+<!--        <input placeholder="Max Students" name="maxStudents" [(ngModel)]="course.maxStudents" type="number"-->
+<!--               class="validate" #maxStudents="ngModel" pattern="^[+]?([0-9]+(?:[\.][0-9]*)?|\.[0-9]+)$" required>-->
+<!--        <div class="error" *ngIf="maxStudents.touched && maxStudents.errors?.required">-->
+<!--          Max Studentsis required.-->
+<!--        </div>-->
+<!--        <div class="error" *ngIf="maxStudents.errors?.pattern && maxStudents.touched">-->
+<!--          Only numbers are permitted-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="form-group">-->
+<!--        <label>Typ kursu:</label> <br>-->
+<!--        <select [(ngModel)]="course.courseForm" name="courseForm">-->
+<!--          <option [ngValue]="courseType" *ngFor="let courseType of courseTypes">{{courseType}}</option>-->
+<!--        </select>-->
+<!--      </div>-->
+<!--      <div class="form-group">-->
+<!--        <textarea placeholder="Opis Kursu" ref-textarea [(ngModel)]="course.description" name="desription" rows="4"-->
+<!--                  cols="20" required #description="ngModel"></textarea>-->
+<!--        <div class="error" *ngIf="description.touched && description.errors?.required">-->
+<!--          Description required.-->
+<!--        </div>-->
+<!--      </div>-->
+
+
+<!--    </div>-->
+<!--    <div class="submit">-->
+<!--      <hr>-->
+<!--      <a class="btn btn-secondary text-white" (click)="addCourse()">Zapisz</a>-->
+<!--      <div class="error" *ngIf="err">-->
+<!--        Wypałnij formularz poprawnie!-->
+<!--      </div>-->
+<!--      <div class="good" *ngIf="good && param1 === null">-->
+<!--        Dodano kurs.-->
+<!--      </div>-->
+<!--      <div class="good" *ngIf="good && param1">-->
+<!--        Dodano zmiany.-->
+<!--      </div>-->
+<!--    </div>-->
+
+
+<!--</form>-->

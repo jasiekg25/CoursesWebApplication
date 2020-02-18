@@ -1,0 +1,136 @@
+export class MockCourses {
+  static courses = [
+    {
+      id: '1',
+      courseName: 'WDI',
+      image: 'https://www.stephotec.com/wp-content/uploads/2018/12/algorithm-2.png',
+      numberOfECTS: 6,
+      typeOfCourse: 'Cw',
+      maxNumberOfStudents: 50,
+      numberOfSemester: 1,
+      numberOfStudents: 45,
+      votesNumber: 10,
+      votesSum: 40,
+      rank: 4
+    },
+    {
+      id: '2',
+      courseName: 'Object-Oriented Programming',
+      image: 'https://miro.medium.com/max/2400/1*dF7xdJ8zEOx4z1jPkr52-Q.png',
+      numberOfECTS: 4,
+      typeOfCourse: 'Lab',
+      maxNumberOfStudents: 30,
+      numberOfSemester: 3,
+      numberOfStudents: 25,
+      votesNumber: 100,
+      votesSum: 470,
+      rank: 4.7
+    },
+    {
+      id: '3',
+      courseName: 'Functional Programming',
+      image: 'https://cdn.shortpixel.ai/client/q_lossy,ret_img,w_1124,h_928/https://torchgrowth.com/wp-content/uploads/2018/06/bigstock-Functional-Programming-Code-231296137-1184x978.jpg',
+      numberOfECTS: 4,
+      typeOfCourse: 'Lab',
+      maxNumberOfStudents: 30,
+      numberOfSemester: 3,
+      numberOfStudents: 20,
+      votesNumber: 40,
+      votesSum: 180,
+      rank: 4.5
+    },
+    {
+      id: '4',
+      courseName: 'Imperative Programming',
+      image: 'https://st4.depositphotos.com/18014766/28553/i/1600/depositphotos_285539574-stock-photo-imperative-programming-with-digital-java.jpg',
+      numberOfECTS: 3,
+      typeOfCourse: 'Lab',
+      maxNumberOfStudents: 30,
+      numberOfSemester: 3,
+      numberOfStudents: 15,
+      votesNumber: 50,
+      votesSum: 150,
+      rank: 3
+    },
+    {
+      id: '5',
+      courseName: 'C++',
+      image: 'https://iiit.pl/wp-content/uploads/cpp_logo.png',
+      numberOfECTS: 3,
+      typeOfCourse: 'Lab',
+      maxNumberOfStudents: 25,
+      numberOfSemester: 4,
+      numberOfStudents: 25,
+      votesNumber: 50,
+      votesSum: 150,
+      rank: 3
+    },
+    {
+      id: '6',
+      courseName: 'Java',
+      image: 'https://download.komputerswiat.pl/media/2016/294/2308615/java_s.jpg',
+      numberOfECTS: 3,
+      typeOfCourse: 'Lab',
+      maxNumberOfStudents: 25,
+      numberOfSemester: 4,
+      numberOfStudents: 25,
+      votesNumber: 300,
+      votesSum: 1500,
+      rank: 5
+    },
+    {
+      id:'7',
+      courseName: 'Scala',
+      image: 'https://miro.medium.com/max/2560/1*lS6lR5Avtac0S-EiXWlygA.jpeg',
+      numberOfECTS: 3,
+      typeOfCourse: 'Lab',
+      maxNumberOfStudents: 25,
+      numberOfSemester: 4,
+      numberOfStudents: 25,
+      votesNumber: 50,
+      votesSum: 130,
+      rank: 2.6
+    },
+    {
+      id: '8',
+      courseName: 'Ruby',
+      image: 'https://i.pinimg.com/originals/eb/9e/3b/eb9e3b7dab09358e7cf13f188f64f9f4.png',
+      numberOfECTS: 3,
+      typeOfCourse: 'Lab',
+      maxNumberOfStudents: 25,
+      numberOfSemester: 4,
+      numberOfStudents: 25,
+      votesNumber: 70,
+      votesSum: 210,
+      rank: 3
+    },
+    {
+      id: '9',
+      courseName: 'Fortran',
+      image: 'data:image/jpeg;base64,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',
+      numberOfECTS: 3,
+      typeOfCourse: 'Lab',
+      maxNumberOfStudents: 25,
+      numberOfSemester: 4,
+      numberOfStudents: 25,
+      votesNumber: 50,
+      votesSum: 110,
+      rank: 2.2
+    },
+    {
+      id: '10',
+      courseName: 'Erlang',
+      image: 'https://ucarecdn.com/b732a7dc-98c7-47e2-88d8-e73c726d6631/',
+      numberOfECTS: 3,
+      typeOfCourse: 'Lab',
+      maxNumberOfStudents: 25,
+      numberOfSemester: 4,
+      numberOfStudents: 25,
+      votesNumber: 40,
+      votesSum: 160,
+      rank: 4
+    },
+
+  ];
+}
+
